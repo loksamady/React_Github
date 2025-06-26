@@ -9,10 +9,10 @@ const App = () => {
   return (
     <div className="flex justify-start items-center flex-col gap-10">
       <Profile />
-      <Toogle />
-      <UserList />
-      <Test1 />
-      <Login />
+      {/* <Toogle /> */}
+      {/* <UserList /> */}
+      {/* <Test1 /> */}
+      {/* <Login /> */}
     </div>
   );
 };
