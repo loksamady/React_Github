@@ -5,7 +5,8 @@ const Test1 = () => {
   const [value, setValue] = useState("");
   useEffect(() => {
     document.title = count;
-  });
+    console.log(useEffect);
+  }, [count]);
   return (
     <div className="flex justify-center items-center flex-col gap-5">
       <h1 className="mb-4 font-bold text-[35px] text-blue-800">{value}</h1>

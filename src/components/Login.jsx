@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 const Login = () => {
-     const [name, setName] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   function handleName(e) {
     setName(e.target.value);
@@ -43,7 +43,7 @@ const Login = () => {
         Submit
       </button>
     </form>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
