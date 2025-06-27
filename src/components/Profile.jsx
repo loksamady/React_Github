@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 const Profile = () => {
   const url = "https://api.github.com/users";
   const [user, setUser] = useState([]);
-  console.log(user);
+  // console.log(user);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -15,7 +15,6 @@ const Profile = () => {
     };
     fetchData();
   }, []);
-  console.log(setUser);
   return (
     <div className="grid grid-flow-col grid-rows-8 gap-10 ">
       {user.map(({ id, avatar_url, login, html_url }) => (
