@@ -5,14 +5,16 @@ import Test1 from "./components/Test1";
 import UserList from "./components/UserList";
 import Toogle from "./components/Toogle";
 import Profile from "./components/Profile";
+import Profile2 from "./components/Profile2";
 const App = () => {
   return (
     <div className="flex justify-start items-center flex-col gap-10">
-      <Profile />
-      {/* <Toogle /> */}
-      {/* <UserList /> */}
-      {/* <Test1 /> */}
-      {/* <Login /> */}
+      {/* <Profile /> */}
+      {/* <Profile2 />
+      <Toogle />
+      <UserList />
+      <Test1 /> */}
+      <Login />
     </div>
   );
 };

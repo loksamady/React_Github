@@ -2,12 +2,6 @@ import React, { useState } from "react";
 const Login = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  function handleName(e) {
-    setName(e.target.value);
-  }
-  function handleEmail(e) {
-    setEmail(e.target.value);
-  }
   function handleSubmit(e) {
     e.preventDefault();
     console.log(name, email);
@@ -18,7 +12,7 @@ const Login = () => {
       <div className="flex justify-between items-start flex-col">
         <label htmlFor="">Full Name</label>
         <input
-          onChange={handleName}
+          onChange={(e) => setName(e.target.value)}
           value={name}
           className="bg-sky-50 text-black w-80 text-[18px] py-2 p-2"
           type="text"
@@ -28,7 +22,7 @@ const Login = () => {
       <div className="flex justify-between items-start flex-col">
         <label htmlFor="">Email</label>
         <input
-          onChange={handleEmail}
+          onChange={(e) => setEmail(e.target.value)}
           value={email}
           className="bg-sky-50 text-black w-80 text-[18px] py-2 p-2"
           type="email"
