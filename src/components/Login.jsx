@@ -10,7 +10,7 @@ const Login = () => {
   function handleSubmit(e) {
     e.preventDefault();
     if (!name || !email) {
-      alert("Please fill all fields");
+      alert("Please fill all fields"); 
       nameRef.current.focus();
       return;
     }

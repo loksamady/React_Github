@@ -1,23 +1,9 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import fetchData from "../hooks/fetchData";
 const Profile = () => {
-  const url = "https://api.github.com/users";
-  const [user, setUser] = useState([]);
-  // console.log(user);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const { data } = await axios(url);
-        setUser(data);
-      } catch (error) {
-        console.log(error.response.status);
-      }
-    };
-    fetchData();
-  }, []);
+  const { data } = fetchData("https://api.github.com/users");
   return (
     <div className="grid grid-flow-col grid-rows-8 gap-10 ">
-      {user.map(({ id, avatar_url, login, html_url }) => (
+      {data.map(({ id, avatar_url, login, html_url }) => (
         <article
           className="p-10 px-5 bg-gray-300 rounded-lg mb-5 hover:bg-green-400 cursor-pointer"
           key={id}
