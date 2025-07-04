@@ -5,6 +5,8 @@ const Card = () => {
     <div>
       <h1>Hello Samady</h1>
       <h2>Hi Naroth</h2>
+      <h2>Hi Naroth</h2>
+      <h2>Hi Naroth</h2>
     </div>
   );
 };
