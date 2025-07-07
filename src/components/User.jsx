@@ -1,7 +1,6 @@
-import { useContext } from "react";
-import { NavBarContext } from "./NavBar";
+import { useGlobalContext } from "../Context";
 const User = () => {
-  const { user, signOut } = useContext(NavBarContext);
+  const { user, signOut } = useGlobalContext();
   return user ? (
     <>
       <h3 className="font-bold">user: {user?.name}</h3>
