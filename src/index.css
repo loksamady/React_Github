@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.active {
+  color: #fff;
+  background-color: #4f46e5;
+}
+:focus {
+  outline: none;
+}

@@ -7,19 +7,43 @@ import Profile2 from "./components/Profile2";
 import User from "./components/User";
 import NavBar from "./components/NavBar";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Home, About, Service } from "./page";
+import { Home, Service, Error } from "./page";
+import RootLayout from "./layout/RootLayout";
+import AboutLayout from "./layout/AboutLayout";
+// import App from "./App.css";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/about",
-    element: <About />,
-  },
-  {
-    path: "/service",
-    element: <Service />,
+    element: <RootLayout />,
+    errorElement: <Error />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "about",
+        element: <AboutLayout />,
+        children: [
+          {
+            path: "Vision",
+            element: <h2 className="text-2xl font-bold">Vision...</h2>,
+          },
+          {
+            path: "Mission",
+            element: <h2 className="text-2xl font-bold">Mission...</h2>,
+          },
+          {
+            path: "Gold",
+            element: <h2 className="text-2xl font-bold">Gold...</h2>,
+          },
+        ],
+      },
+      {
+        path: "service",
+        element: <Service />,
+      },
+    ],
   },
 ]);
 const App = () => {
